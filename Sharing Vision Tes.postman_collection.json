@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "76542dcb-f96a-4c0e-b321-a6c41e3b2c0d",
+		"name": "Sharing Vision Tes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32469934"
+	},
+	"item": [
+		{
+			"name": "Create Article",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Understanding SQLAlchemy ORM\",\r\n    \"category\": \"Database\",\r\n    \"content\": \"SQLAlchemy ORM provides a way to map Python classes to database tables using declarative models. It allows developers to write database queries using Python instead of raw SQL. The ORM automatically converts database results into Python objects, making it easier to work with databases in a structured way. Additionally, it supports complex relationships, lazy loading, and session management to optimize performance and maintainability.\",\r\n    \"status\": \"publish\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/article",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ALL Articles",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/article/50/0",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"article",
+						"50",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Articles Based On ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/article/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Article",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"SQLAlchemy, How to work with SQLAlchemy Edited\",\r\n    \"category\": \"Sport Edited\",\r\n    \"content\": \"Flask-SQLAlchemy is a wrapper around SQLAlchemy. You should follow the SQLAlchemy Tutorial to learn about how to use it, and consult its documentation for detailed information about its features. These docs show how to set up Flask-SQLAlchemy itself, not how to use SQLAlchemy. Flask-SQLAlchemy sets up the engine and scoped session automatically, so you can skip those parts of the SQLAlchemy tutorial. Edited\",\r\n    \"status\": \"trash\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/article/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Article",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/article/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"article",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
